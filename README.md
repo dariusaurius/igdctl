@@ -4,14 +4,14 @@ UPnP gateway port mapper with Docker
 
 ## Installation
 
-Builing Docker container:
+Building Docker container:
 
     cd /home/docker/igdctl
     docker build -t igdctl .
 
 ## Usage
 
-List all open ports opened with UPnP:
+List all open ports opened; on some routers/gateways it may only show mappings added via UPnP:
 
     docker run --rm --network=host igdctl -l
 
