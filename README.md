@@ -11,7 +11,7 @@ Building Docker container:
 
 ## Usage
 
-List all open ports opened; on some routers/gateways it may only show mappings added via UPnP:
+List all mapped ports; on some routers/gateways it may only show mappings added via UPnP:
 
     docker run --rm --network=host igdctl -l
 
