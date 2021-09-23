@@ -3,8 +3,8 @@ UPnP gateway port mapper with Docker
 
 Builing Docker container:
 
-  cd /home/docker/igdctl
-  docker build -t igdctl .
+   cd /home/docker/igdctl
+   docker build -t igdctl .
 
 
 List all open ports opened with UPnP:
