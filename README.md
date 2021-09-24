@@ -1,33 +1,34 @@
-# Dockerized igdctl
+# igdctl as Docker
 
-UPnP gateway port mapper with Docker
+UPnP gateway port mapper with Docker for over *"Internet Gateway Device (IGD) Standardized Device Control Protocol"* based on PERL. 
 
 ## Installation
 
 Building Docker container:
 
-    cd /home/docker/igdctl
+    git clone https://github.com/dariusaurius/igdctl.git
     docker build -t igdctl .
 
 ## Usage
 
-List all mapped ports; on some routers/gateways it may only show mappings added via UPnP:
+*(-l)* List all mapped ports; on some routers/gateways it may only show mappings added via UPnP:
 
     docker run --rm --network=host igdctl -l
 
+### Add mapping
 
-Add port mapping:
+*(-a)* Add *(-e)* external port ``80`` to *(-i)* internal port ``80`` for *(-I)* client ``192.168.178.10`` with *(-P)* protocol ``TCP``:
 
     docker run --rm --network=host igdctl -a -e 80 -i 80 -I 192.168.178.10 -P TCP
 
 
-Remove port mapping:
+*(-R)* Remove *(-e)* external port mapping for port ``80`` on all clients with *(-P)* protocol set to ``TCP``:
 
     docker run --rm --network=host igdctl -R -e 80 -P TCP
 
 ## Help
 
-Display help text with many more commands:
+Display *(-h)* help text with many more commands:
 
     docker run --rm --network=host igdctl -h
 
