@@ -141,11 +141,11 @@ my $service;
 if ($action_enable+$action_disable+$action_print) {
     ## Get WANIPCommonInterfaceConfig service
     $service = $device->getservicebyname("urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1");
-    print STDERR "WANCommonInterfaceConfig service not avaleble.\n\n" and exit 1 if (!$service);
+    print STDERR "WANCommonInterfaceConfig service not available.\n\n" and exit 1 if (!$service);
 } else {##if ($action_reconnect+$action_add_port+$action_get_port+$action_remove_port+$action_clear_ports+$action_list_ports)
     ## Get WANIPConnection service
     $service = $device->getservicebyname("urn:schemas-upnp-org:service:WANIPConnection:1");
-    print STDERR "WANCommonInterfaceConfig service not avaleble.\n\n" and exit 1 if (!$service);
+    print STDERR "WANCommonInterfaceConfig service not available.\n\n" and exit 1 if (!$service);
 }
 if ($action_print) {
     my $res, my $out_args, my $out="";
@@ -534,7 +534,7 @@ Example:
 Actions:
   -h, --help                : Displays this help text.
   -v, --verbose             : Verbose mode.
-  -p, --print               : Prints connection information avaleble.
+  -p, --print               : Prints connection information available.
       --enable              : Enable internet access if supported.
       --disable             : Disable internet access if supported.
   -r, --reconnect           : Triggers a reconnect.
@@ -554,7 +554,7 @@ Actions:
                               removed.
 Options:
   -d, --device=DEV          : specifies the device number when more then one
-                              devices are avaleble.
+                              devices are available.
   -E, --external-ip=IP      : specifies a remote host. Wildcards are supported.
   -e, --external-port=PORT  : specifies an external port number.
   -I, --internal-ip=IP      : specifies a client ip address.
