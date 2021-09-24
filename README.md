@@ -2,7 +2,7 @@
 
 Simple UPnP gateway port mapper for the *"Internet Gateway Device (IGD) Standardized Device Control Protocol"* based on PERL and started with Docker. 
 
-The container uses the default gateway from the docker host and removes itself after execution.
+The container uses the default gateway of the docker host and removes itself after execution.
 
 ## Installation
 
