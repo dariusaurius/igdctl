@@ -106,7 +106,7 @@ if ($action_print+$action_enable+$action_disable+$action_reconnect+$action_add_p
 ## Display help content and exit
 if ($help) {
     ## Help content is located at the bottom after the __DATA__ statement
-    print STDOUT <data> and exit 2;
+    print STDOUT <DATA> and exit 2;
 }
 ## scanning for devices
 print STDOUT "Scanning for devices ...\n" if $verbose;
