@@ -25,6 +25,12 @@ Remove port mapping:
 
     docker run --rm --network=host igdctl -R -e 80 -P TCP
 
+## Help
+
+Display help text with many more commands:
+
+    docker run --rm --network=host igdctl -h
+
 
 ## Sources
 
